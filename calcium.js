@@ -3,8 +3,10 @@ var pendingOperation = "";
 var leftVariable = "";
 
 function buttonPressed(number) {
-    addToDisplay(number);
     var displayElement = document.getElementById('display');
+if (displayElement.textContent=="0"){display=""}
+    addToDisplay(number);
+
     displayElement.textContent = display;
 }
 
@@ -33,7 +35,8 @@ function buttonEqualsPressed() {}
 function storeAndClear(){
     var displayElement = document.getElementById('display');
     leftVariable = displayElement.textContent;
-    displayElement.textContent = "";
+    displayElement.textContent = "0";
+    display = "0";
 }
 
 function addToDisplay(number){

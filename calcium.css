@@ -2,8 +2,18 @@
     width: 20%;
     background-color: blue;
     margin: 10px;
+    float: left;
+    cursor: pointer;
 }
 
-#button1 {
+#button {
     background-color: red;
+}
+
+#calculatorcontent {
+     width : 300px;
+     height: 300px;
+
+
+
 }
