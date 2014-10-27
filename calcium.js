@@ -97,6 +97,5 @@ function addDecimal(){
     }
     else {
         display += ".";
-        alert(display);
     }
 }
