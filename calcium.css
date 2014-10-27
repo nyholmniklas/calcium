@@ -13,21 +13,26 @@ body {
 }
 
 .button {
-    width: 20%;
+    
+    width: 45px;
+    height: 40px;
     background-color: #0E2307;
     margin: 10px;
     float: left;
     cursor: pointer;
     border: solid;
     border-color: yellow;
-    border-radius: 40px 40px;
-
+    border-radius: 10px 10px;
     color:White;
     font-size: 120%;
     font-weight: bold;
-
-
     text-align: center;
+}
+
+.buttoncontent {
+
+	padding: 5px;
+	color:white;
 }
 
 #button {
