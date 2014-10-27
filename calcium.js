@@ -15,14 +15,17 @@ function buttonSubstractPressed() {
 
 function buttonAddPressed() {
     pendingOperation = "add";
+    storeAndClear();
 }
 
 function buttonDividePressed() {
     pendingOperation = "divide";
+    storeAndClear();
 }
 
 function buttonMultiplyPressed() {
     pendingOperation = "multiply";
+    storeAndClear();
 }
 
 function buttonEqualsPressed() {}
