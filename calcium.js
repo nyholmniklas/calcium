@@ -29,7 +29,6 @@ function buttonMultiplyPressed() {
 
 function buttonEqualsPressed() {
     var tempLeft = +leftVariable;
-    alert(pendingOperation);
     switch (pendingOperation) {
         case "add":
             display = tempLeft + +getDisplayValue();
