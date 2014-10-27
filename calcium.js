@@ -1,13 +1,10 @@
-var display = "";
+var display = "0";
 var pendingOperation = "";
 var leftVariable = "";
 
 function buttonPressed(number) {
-    var displayElement = document.getElementById('display');
-if (displayElement.textContent=="0"){display=""}
     addToDisplay(number);
-
-    displayElement.textContent = display;
+    updateDisplay();
 }
 
 function buttonSubstractPressed() {
@@ -30,15 +27,61 @@ function buttonMultiplyPressed() {
     storeAndClear();
 }
 
-function buttonEqualsPressed() {}
+function buttonEqualsPressed() {
+    var tempLeft = +leftVariable;
+    alert(pendingOperation);
+    switch (pendingOperation) {
+        case "add":
+            display = tempLeft + +getDisplayValue();
+            break;
 
-function storeAndClear(){
+        case "substract":
+            display = tempLeft - +getDisplayValue();
+            break;
+
+        case "divide":
+            display = tempLeft / +getDisplayValue();
+            break;
+
+        case "multiply":
+            display = tempLeft * +getDisplayValue();
+            break;
+    }
+    pendingOperation = "";
+    updateDisplay();
+    store();
+}
+
+function getDisplayValue() {
     var displayElement = document.getElementById('display');
-    leftVariable = displayElement.textContent;
+    return displayElement.textContent;
+}
+
+function updateDisplay() {
+    var displayElement = document.getElementById('display');
+    displayElement.textContent = display;
+}
+
+function storeAndClear() {
+    store();
+    clear();
+}
+
+function clear() {
+    var displayElement = document.getElementById('display');
     displayElement.textContent = "0";
     display = "0";
 }
 
-function addToDisplay(number){
-   display += number;
+function store() {
+    var displayElement = document.getElementById('display');
+    leftVariable = displayElement.textContent;
+}
+
+function addToDisplay(number) {
+    if (display == "0") {
+        display = "";
+    }
+    display = display.toString();
+    display += number;
 }
