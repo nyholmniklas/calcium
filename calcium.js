@@ -51,6 +51,11 @@ function buttonEqualsPressed() {
     store();
 }
 
+function buttonDecimalPressed(){
+    addDecimal();
+    updateDisplay();
+}
+
 function getDisplayValue() {
     var displayElement = document.getElementById('display');
     return displayElement.textContent;
@@ -83,4 +88,15 @@ function addToDisplay(number) {
     }
     display = display.toString();
     display += number;
+}
+
+function addDecimal(){
+    displayString = "" + display;
+    if (displayString.indexOf(".") > -1) {
+        return;
+    }
+    else {
+        display += ".";
+        alert(display);
+    }
 }
