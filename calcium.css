@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 body { background-color: green;
       
 	
+=======
+body {
+    background-color: green;
+>>>>>>> e94dcd658f31a04c6df5bff1fe4e6e8567c07986
 
 }
 
-.button:hover {background-color:red;
+.button:hover {
+    background-color: red;
 }
 
 @font-face {
@@ -21,9 +27,12 @@ body { background-color: green;
     border: solid;
     border-color: yellow;
     border-radius: 40px 40px;
+
     color:White;
     font-size: 120%;
     font-weight: bold;
+
+
     text-align: center;
 }
 
@@ -32,21 +41,21 @@ body { background-color: green;
 }
 
 #calculatorcontent {
-	margin:auto;
+    margin: auto;
     padding: 20px;
-    background-image:url('button.jpg');
-	background-repeat: no-repeat;
-    background-size: 100% 100%;	
-     width : 300px;
-     height: 300px;
-     background-color: ;
-     border: solid black;
-     border-radius: 20px 20px;
-
+    background-image: url('button.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 300px;
+    background-color:;
+    border: solid black;
+    border-radius: 20px 20px;
 
 }
 
 #display {
+
 
 	Background-color: black;
 	border: solid orange;
@@ -57,4 +66,5 @@ body { background-color: green;
 	font-family : "DigiFont";
 	color: yellow;
 	Font-size: 200%;
+
 }
