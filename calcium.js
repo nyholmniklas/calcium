@@ -46,6 +46,7 @@ function buttonEqualsPressed() {
             display = tempLeft * +getDisplayValue();
             break;
     }
+    
     pendingOperation = "";
     updateDisplay();
     store();
@@ -83,7 +84,7 @@ function store() {
 }
 
 function addToDisplay(number) {
-    if (display == "0") {
+    if (display == "0" || display == "Infinity" || display=="NaN") {
         display = "";
     }
     display = display.toString();
