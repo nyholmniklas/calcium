@@ -1,3 +1,3 @@
-function buttonPressed(fart) {
-    alert('Hello the number is ' + fart);
+function buttonPressed(number) {
+    alert('Hello the number is ' + number);
 }
