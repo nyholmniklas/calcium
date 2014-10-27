@@ -1,3 +1,3 @@
-/**
- * Created by Niklas on 27.10.2014.
- */
+function buttonPressed(fart) {
+    alert('Hello the number is ' + fart);
+}
