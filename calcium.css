@@ -1,5 +1,5 @@
 body { background-color: green;
-   
+      
 	
 
 }
@@ -7,16 +7,23 @@ body { background-color: green;
 .button:hover {background-color:red;
 }
 
+@font-face {
+    font-family: DigiFont;
+    src: url(digital-7.ttf);
+}
+
 .button {
     width: 20%;
-    background-color: orange;
+    background-color: #0E2307;
     margin: 10px;
     float: left;
     cursor: pointer;
     border: solid;
     border-color: yellow;
     border-radius: 40px 40px;
-    color:blue;
+    color:White;
+    font-size: 120%;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -41,8 +48,13 @@ body { background-color: green;
 
 #display {
 
-	Background-color: #CC3399;
+	Background-color: black;
 	border: solid orange;
 	border-radius: 5px 5px;
 	padding: 5px;
+	padding-right: 10px;
+	text-align:right;
+	font-family : "DigiFont";
+	color: yellow;
+	Font-size: 200%;
 }
