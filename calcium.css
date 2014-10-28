@@ -21,8 +21,8 @@ body {
     float: left;
     cursor: pointer;
     border: solid;
-    border-color: yellow;
-    border-radius: 10px 10px;
+    border-color: darkslategray;
+    border-radius: 3px 3px;
     color: White;
     font-size: 120%;
     font-weight: bold;
