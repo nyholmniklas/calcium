@@ -58,7 +58,7 @@ function addToDisplay(number) {
         display = "";
     }
     display = display.toString();
-    display += number;
+    display += number.toString();
     updateDisplay();
 }
 
@@ -103,6 +103,8 @@ function performPendingOperation() {
             display = tempLeft * +getDisplayValue();
             break;
     }
+    //Make sure we keep display a string so there aren't problems later
+    display = display.toString();
     pendingOperation = "";
 }
 
