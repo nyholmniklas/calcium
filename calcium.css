@@ -23,6 +23,7 @@ body {
     border: solid;
     border-color: darkslategray;
     border-radius: 10px 10px;
+    border-width: thin; /*now zooming out works in sacrifice of bold border*/
     color: White;
     font-size: 120%;
     font-weight: bold;
