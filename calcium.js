@@ -127,7 +127,7 @@ function keyHandler(e) {
     //If enter was pressed call the appropriate function
     if (pressedKey == enter) buttonEqualsPressed();
     //Else if it was a number or operand button on the keypad do some stuff with magic ints
-    else if (numpad0KeyCode <= pressedKey <= numpadDivide) {
+    else if (numpad0KeyCode <= pressedKey && pressedKey <= numpadDivide) {
         //If its a number
         if (pressedKey < numpad9KeyCode) {
             var adjustementToGetNumberFromKeyCode = 96;
