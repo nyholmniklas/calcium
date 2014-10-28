@@ -101,58 +101,67 @@ function addDecimal() {
     }
 }
 
+/**
+ * Stuff for handling keydown events
+ */
+//We bind key press events to our keyHandler(e) function
 document.onkeydown = keyHandler;
+//Keycode for enter
+var enterKeyCode = 13;
+//Some keycodes for numpad keys on the keyboard
+var numpad0KeyCode = 96;
+var numpad9KeyCode = 105;
+var numpadMultiplyKeyCode = 106;
+var numpadAddKeyCode = 107;
+var numpadSubstractKeyCode = 109;
+var numpadDecimalKeyCode = 110;
+var numpadDivideKeyCode = 111;
+
 function keyHandler(e) {
-    var pressedKey;
-    if (document.all) {
-        e = window.event;
-        pressedKey = e.keyCode;
-    }
-    if (e.which) {
-        pressedKey = e.which;
-    }
-
-    //Keycode for enter
-    var enter = 13;
-    //Some keycodes for numpad keys on the keyboard
-    var numpad0KeyCode = 96;
-    var numpad9KeyCode = 105;
-    var numpadMultiply = 106;
-    var numpadAdd = 107;
-    var numpadSubstract = 109;
-    var numpadDecimal = 110;
-    var numpadDivide = 111;
-
+    var event = window.event;
+    var pressedKey = event.keyCode;
 
     //If enter was pressed call the appropriate function
-    if (pressedKey == enter) buttonEqualsPressed();
+    if (pressedKey == enterKeyCode) buttonEqualsPressed();
     //Else if it was a number or operand button on the keypad do some stuff with magic ints
-    else if (numpad0KeyCode <= pressedKey && pressedKey <= numpadDivide) {
+    else if (isNumpadKey(pressedKey)) {
         //If its a number
-        if (pressedKey < numpad9KeyCode) {
-            var adjustementToGetNumberFromKeyCode = 96;
-            var number = pressedKey - adjustementToGetNumberFromKeyCode;
-            buttonPressed(number);
-        }
+        if (pressedKey <= numpad9KeyCode) handleNumberNumpadKeyPressed(pressedKey);
         //Else if its not a number and it's something like divide or enter..
-        else {
-            switch (pressedKey) {
-                case numpadMultiply:
-                    buttonMultiplyPressed();
-                    break;
-                case numpadDivide:
-                    buttonDividePressed();
-                    break;
-                case numpadAdd:
-                    buttonAddPressed();
-                    break;
-                case numpadSubstract:
-                    buttonSubstractPressed();
-                    break;
-                case numpadDecimal:
-                    buttonPressed(".");
-                    break;
-            }
-        }
+        else handleNonNumericNumpadKeyPressed(pressedKey);
     }
+}
+
+function isNumpadKey(keyCode) {
+    return (numpad0KeyCode <= keyCode && keyCode <= numpadDivideKeyCode);
+}
+
+function handleNumberNumpadKeyPressed(pressedKey) {
+    buttonPressed(getNumberFromNumpadKey(pressedKey));
+}
+
+function handleNonNumericNumpadKeyPressed(pressedKey) {
+    switch (pressedKey) {
+        case numpadMultiplyKeyCode:
+            buttonMultiplyPressed();
+            break;
+        case numpadDivideKeyCode:
+            buttonDividePressed();
+            break;
+        case numpadAddKeyCode:
+            buttonAddPressed();
+            break;
+        case numpadSubstractKeyCode:
+            buttonSubstractPressed();
+            break;
+        case numpadDecimalKeyCode:
+            buttonPressed(".");
+            break;
+    }
+}
+
+function getNumberFromNumpadKey(pressedKey) {
+    var adjustementToGetNumberFromKeyCode = 96;
+    var number = pressedKey - adjustementToGetNumberFromKeyCode;
+    return number;
 }
