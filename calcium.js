@@ -1,12 +1,16 @@
+/**
+ * A bunch of global variables for our calculator application
+ */
 var display = "0";
 var pendingOperation = "";
 var leftVariable = "";
 
+/**
+ * Functions triggered by button presses
+ */
 function buttonPressed(number) {
     addToDisplay(number);
-    updateDisplay();
 }
-
 function buttonSubstractPressed() {
     pendingOperation = "substract";
     storeAndClear();
@@ -28,6 +32,57 @@ function buttonMultiplyPressed() {
 }
 
 function buttonEqualsPressed() {
+    performPendingOperation()
+    updateDisplay();
+    store();
+}
+
+function buttonDecimalPressed() {
+    addDecimal();
+    updateDisplay();
+}
+
+/**
+ * Get the value of what is currently in display, add to it or update it based on global variable display
+ */
+
+function getDisplayValue() {
+    var displayElement = document.getElementById('display');
+    return displayElement.textContent;
+}
+
+function addToDisplay(number) {
+    if (display == "0" || display == "Infinity" || display == "NaN") {
+        display = "";
+    }
+    display = display.toString();
+    display += number;
+    updateDisplay();
+}
+
+function updateDisplay() {
+    var displayElement = document.getElementById('display');
+    displayElement.textContent = display;
+}
+
+/**
+ * Add a decimal to display
+ */
+
+function addDecimal() {
+    displayString = "" + display;
+    if (displayString.indexOf(".") > -1) {
+        return;
+    }
+    else {
+        display += ".";
+    }
+}
+
+/**
+ * Perform operations
+ */
+function performPendingOperation() {
     var tempLeft = +leftVariable;
     switch (pendingOperation) {
         case "add":
@@ -46,36 +101,15 @@ function buttonEqualsPressed() {
             display = tempLeft * +getDisplayValue();
             break;
     }
-
     pendingOperation = "";
-    updateDisplay();
-    store();
 }
 
-function buttonDecimalPressed() {
-    addDecimal();
-    updateDisplay();
-}
-
-function getDisplayValue() {
-    var displayElement = document.getElementById('display');
-    return displayElement.textContent;
-}
-
-function updateDisplay() {
-    var displayElement = document.getElementById('display');
-    displayElement.textContent = display;
-}
-
+/**
+ * For storing the current number on the display into the leftVariable variable and clearing the screen
+ */
 function storeAndClear() {
     store();
     clear();
-}
-
-function clear() {
-    var displayElement = document.getElementById('display');
-    displayElement.textContent = "0";
-    display = "0";
 }
 
 function store() {
@@ -83,22 +117,10 @@ function store() {
     leftVariable = displayElement.textContent;
 }
 
-function addToDisplay(number) {
-    if (display == "0" || display == "Infinity" || display == "NaN") {
-        display = "";
-    }
-    display = display.toString();
-    display += number;
-}
-
-function addDecimal() {
-    displayString = "" + display;
-    if (displayString.indexOf(".") > -1) {
-        return;
-    }
-    else {
-        display += ".";
-    }
+function clear() {
+    var displayElement = document.getElementById('display');
+    displayElement.textContent = "0";
+    display = "0";
 }
 
 /**
