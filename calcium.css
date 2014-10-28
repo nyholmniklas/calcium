@@ -20,9 +20,10 @@ body {
     margin: 10px;
     float: left;
     cursor: pointer;
+    borde
     border: solid;
     border-color: darkslategray;
-    border-radius: 3px 3px;
+    border-radius: 10px 10px;
     color: White;
     font-size: 120%;
     font-weight: bold;
@@ -60,6 +61,8 @@ body {
 }
 
 #calculatorcontent {
+    min-width:300px;
+    min-height:300px;
     margin: auto;
     padding: 20px;
     background-image: url('leather.png');
