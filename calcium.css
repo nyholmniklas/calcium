@@ -85,3 +85,64 @@ body {
     color: yellow;
     Font-size: 200%;
 }
+
+
+/* Slide Out Functionality*/
+/*sloppy needs polishing*/
+
+
+#slideout {
+            min-height:35px;
+            min-width:300px;
+            position: fixed;
+            top: 0px;
+            left: 42%;
+            height: 35px;
+            width: 300px;
+            border: solid orange;
+            padding: 12px 0;
+            background-image 
+            background: black;
+            color: red;
+            background-image: url('leather.png');
+            background-repeat: no-repeat;            
+            text-align:  center;
+            font-size: 120%;
+            font-weight: bold;
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            -moz-border-radius: 0px 0px 10px 10px;
+            border-radius: 0px 0px 10px 10px;
+        }
+        #slideout_inner {
+           
+            position: fixed;
+            top: -400px;
+            left: 40%;
+            width: 400px;
+            
+            padding-top: 40px;
+            height: 400px;
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            text-align: left;
+            -webkit-border-radius: 0 0 5px 0;
+            -moz-border-radius: 0 0 5px 0;
+            border-radius: 0 0 5px 0;
+        }
+        #slideout_inner textarea {
+            padding-top:0px; /*hides the initial slide*/
+           
+            
+        }
+        #slideout:hover {
+            top: 250px; /*which side does the slider slides*/
+        }
+        #slideout:hover #slideout_inner {
+            top: 0;     /*which side does the inner slide appears*/
+        }
