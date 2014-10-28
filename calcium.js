@@ -51,7 +51,9 @@ function getDisplayValue() {
     return displayElement.textContent;
 }
 
+var maxDisplayLength = 10;
 function addToDisplay(number) {
+    if (display.length > maxDisplayLength) return;
     if (display == "0" || display == "Infinity" || display == "NaN") {
         display = "";
     }
@@ -62,7 +64,7 @@ function addToDisplay(number) {
 
 function updateDisplay() {
     var displayElement = document.getElementById('display');
-    displayElement.textContent = display;
+    displayElement.textContent = display.substring(0, maxDisplayLength);
 }
 
 /**
