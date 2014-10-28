@@ -14,7 +14,6 @@ body {
 }
 
 .button {
-    
     width: 45px;
     height: 40px;
     background-color: #0E2307;
@@ -24,38 +23,36 @@ body {
     border: solid;
     border-color: yellow;
     border-radius: 10px 10px;
-    color:White;
+    color: White;
     font-size: 120%;
     font-weight: bold;
     text-align: center;
--webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	transition: all 0.2s;
-	
-	-webkit-box-shadow: 0px 9px 0px #84261a;
-        -moz-box-shadow: 0px 9px 0px #84261a;
-        box-shadow: 0px 9px 0px #84261a;
-
-
-
--webkit-user-select: none; /* Chrome/Safari */        
--moz-user-select: none; /* Firefox */
--ms-user-select: none; /* IE10+ */
-
-
+    /*Set time for transitions*/
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    /*Set box shadow when not active*/
+    -webkit-box-shadow: 0px 9px 0px #84261a;
+    -moz-box-shadow: 0px 9px 0px #84261a;
+    box-shadow: 0px 9px 0px #84261a;
+    /*Prevent the number on the button from getting selected as text by disabling selecting*/
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 }
 
-.button:active{
+.button:active {
+    /*Make shadow smaller and move the button down a bit to give illusion of being "pressed"*/
     -webkit-box-shadow: 0px 2px 0px #84261a;
     -moz-box-shadow: 0px 2px 0px #84261a;
     box-shadow: 0px 2px 0px #84261a;
-    position:relative;
-    top:7px;}
+    position: relative;
+    top: 7px;
+}
 
 .buttoncontent {
-
-	padding: 5px;
-	color:white;
+    padding: 5px;
+    color: white;
 }
 
 #button {
@@ -73,21 +70,16 @@ body {
     background-color:;
     border: solid black;
     border-radius: 20px 20px;
-
-
 }
 
 #display {
-
-
-	Background-color: black;
-	border: solid orange;
-	border-radius: 5px 5px;
-	padding: 5px;
-	padding-right: 10px;
-	text-align:right;
-	font-family : "DigiFont";
-	color: yellow;
-	Font-size: 200%;
-
+    Background-color: black;
+    border: solid orange;
+    border-radius: 5px 5px;
+    padding: 5px;
+    padding-right: 10px;
+    text-align: right;
+    font-family: "DigiFont";
+    color: yellow;
+    Font-size: 200%;
 }
