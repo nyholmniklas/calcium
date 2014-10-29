@@ -4,6 +4,10 @@ body {
     padding-top: 10%;
 }
 
+h3 {text-align : center;
+    font-size : 120%;
+    font-weight: bold;}
+
 .button:hover {
     background-color: red;
 }
@@ -93,7 +97,7 @@ body {
 
 #slideout {
             min-height:35px;
-            min-width:300px;
+            min-width:150px;
             position: fixed;
             top: 0px;
             left: 42%;
@@ -101,14 +105,11 @@ body {
             width: 300px;
             border: solid orange;
             padding: 12px 0;
-            background-image 
             background: black;
             color: red;
             background-image: url('leather.png');
             background-repeat: no-repeat;            
             text-align:  center;
-            font-size: 120%;
-            font-weight: bold;
             -webkit-transition-duration: 0.3s;
             -moz-transition-duration: 0.3s;
             -o-transition-duration: 0.3s;
@@ -118,12 +119,12 @@ body {
             border-radius: 0px 0px 10px 10px;
         }
         #slideout_inner {
-           
+            min-height: 340px;
+            min-width:  340px;
             position: fixed;
-            top: -400px;
+            top: -400px; /*hides the slide out*/
             left: 40%;
             width: 400px;
-            
             padding-top: 40px;
             height: 400px;
             -webkit-transition-duration: 0.3s;
@@ -146,3 +147,4 @@ body {
         #slideout:hover #slideout_inner {
             top: 0;     /*which side does the inner slide appears*/
         }
+
