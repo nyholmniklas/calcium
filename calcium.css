@@ -97,13 +97,12 @@ h3 {text-align : center;
 
 #slideout {
             min-height:35px;
-            min-width:150px;
+            min-width:200px;
             position: fixed;
             top: 0px;
             left: 42%;
             height: 35px;
-            width: 300px;
-            border: solid orange;
+            width: 325px;
             padding: 12px 0;
             background: black;
             color: red;
@@ -138,11 +137,10 @@ h3 {text-align : center;
         }
         #slideout_inner textarea {
             padding-top:0px; /*hides the initial slide*/
-           
-            
+                       
         }
         #slideout:hover {
-            top: 250px; /*which side does the slider slides*/
+            top: 380px; /*which side does the slider slides*/
         }
         #slideout:hover #slideout_inner {
             top: 0;     /*which side does the inner slide appears*/
