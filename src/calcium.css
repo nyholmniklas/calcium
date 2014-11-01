@@ -52,6 +52,7 @@ h3 {
 
 #buttons {
     overflow: auto;
+    background-color: firebrick;
 }
 
 #display {
