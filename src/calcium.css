@@ -7,11 +7,6 @@ h3 {
     background-color: red;
 }
 
-@font-face {
-    font-family: DigiFont;
-    src: url(digital-7.ttf);
-}
-
 .button {
     box-sizing:border-box;
     width: 45px;
