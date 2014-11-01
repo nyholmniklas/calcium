@@ -47,7 +47,7 @@ function buttonDecimalPressed() {
  */
 
 function getDisplayValue() {
-    var displayElement = document.getElementById('display');
+    var displayElement = document.getElementById('calculator-display');
     return displayElement.textContent;
 }
 
@@ -63,7 +63,7 @@ function addToDisplay(number) {
 }
 
 function updateDisplay() {
-    var displayElement = document.getElementById('display');
+    var displayElement = document.getElementById('calculator-display');
     displayElement.textContent = display.substring(0, maxDisplayLength);
 }
 
@@ -117,12 +117,12 @@ function storeAndClear() {
 }
 
 function store() {
-    var displayElement = document.getElementById('display');
+    var displayElement = document.getElementById('calculator-display');
     leftVariable = displayElement.textContent;
 }
 
 function clear() {
-    var displayElement = document.getElementById('display');
+    var displayElement = document.getElementById('calculator-display');
     displayElement.textContent = "0";
     display = "0";
 }
