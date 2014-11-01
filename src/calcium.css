@@ -41,7 +41,7 @@
 }
 
 #calculator-buttons {
-    overflow: auto;
+    height: 280px;
     background-color: firebrick;
 }
 
