@@ -13,8 +13,6 @@
 
 #slideout-content {
     position: relative;
-    min-height: 340px;
-    min-width: 340px;
     height: 400px;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
@@ -25,8 +23,6 @@
 
 #calculator-content {
     font-family: Arial;
-    min-width: 300px;
-    min-height: 300px;
     margin: auto;
     width: 300px;
     border: solid black;
