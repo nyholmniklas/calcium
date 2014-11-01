@@ -73,11 +73,19 @@
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
+    /*Set box shadow when not active*/
+    -webkit-box-shadow: 0px 9px 0px #84261a;
+    -moz-box-shadow: 0px 9px 0px #84261a;
+    box-shadow: 0px 9px 0px #84261a;
 }
 
 .calculator-button:active {
     position: relative;
     top: 5px;
+    /*Make shadow smaller and move the button down a bit to give illusion of being "pressed"*/
+    -webkit-box-shadow: 0px 2px 0px #84261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    box-shadow: 0px 2px 0px #84261a;
 }
 
 .calculator-button:hover {
