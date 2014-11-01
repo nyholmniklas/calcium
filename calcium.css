@@ -13,10 +13,11 @@ h3 {
 }
 
 .button {
+    box-sizing:border-box;
     width: 45px;
     height: 40px;
     background-color: #0E2307;
-    margin: 10px;
+    margin: 15px;
     float: left;
     cursor: pointer;
     border: solid;
@@ -42,13 +43,12 @@ h3 {
 }
 
 #calculatorcontent {
-    font-family: "DigiFont";
+    font-family: Arial;
     min-width: 300px;
     min-height: 300px;
     margin: auto;
     width: 300px;
     border: solid black;
-    background-color: whitesmoke;
 }
 
 #buttons {
@@ -57,10 +57,12 @@ h3 {
 
 #display {
     Background-color: black;
+    box-sizing:border-box;
     border: solid orange;
-    border-radius: 5px 5px;
+    border-width: 5px;
     padding: 5px;
     padding-right: 10px;
+    font-size: 1.5em;
     text-align: right;
     color: yellow;
 }
@@ -94,10 +96,13 @@ h3 {
 }
 
 #calculator-footer {
-    padding-top: 50px;
+    color: white;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
-    height: 30px;
+    height: 20px;
     text-align: center;
-    font-weight: bold;
+    font-size: 1.3em;
 }
 
