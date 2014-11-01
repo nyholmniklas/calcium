@@ -24,7 +24,6 @@ h3 {
     border-color: darkslategray;
     color: White;
     text-align: center;
-    font-weight: bold;
     font-size: 1.4em;
     /*Prevent the number on the button from getting selected as text by disabling selecting*/
     -webkit-user-select: none; /* Chrome/Safari */
@@ -34,11 +33,11 @@ h3 {
 
 .button:active {
     position: relative;
-    top: 7px;
+    top: 5px;
 }
 
 .buttoncontent {
-    padding: 7px;
+    padding: 5px;
     color: white;
 }
 
