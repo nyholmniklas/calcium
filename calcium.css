@@ -73,20 +73,8 @@ h3 {
 /*sloppy needs polishing*/
 
 #slideout {
-    min-height: 35px;
-    min-width: 200px;
-    height: 35px;
-    width: 325px;
-    padding: 12px 0;
-    background: black;
-    color: red;
-    background-image: url('leather.png');
-    background-repeat: no-repeat;
+    background-color: red;
     text-align: center;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
 }
 
 #slideout_inner {
