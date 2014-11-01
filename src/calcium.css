@@ -1,5 +1,63 @@
-.button:hover {
-    background-color: red;
+#slideout {
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    text-align: center;
+    position: relative;
+    top: -340px;
+}
+
+#slideout:hover, #slideout:hover > #slideout-content {
+    top: 0px; /*which side does the slider slides*/
+}
+
+#slideout-content {
+    position: relative;
+    min-height: 340px;
+    min-width: 340px;
+    height: 400px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-align: left;
+}
+
+#calculatorcontent {
+    font-family: Arial;
+    min-width: 300px;
+    min-height: 300px;
+    margin: auto;
+    width: 300px;
+    border: solid black;
+}
+
+#display {
+    Background-color: black;
+    box-sizing:border-box;
+    border: solid orange;
+    border-width: 5px;
+    padding: 5px;
+    padding-right: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    color: yellow;
+}
+
+#buttons {
+    overflow: auto;
+    background-color: firebrick;
+}
+
+#calculator-footer {
+    color: white;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 1.3em;
 }
 
 .button {
@@ -26,73 +84,12 @@
     top: 5px;
 }
 
+.button:hover {
+    background-color: red;
+}
+
 .buttoncontent {
     padding: 5px;
     color: white;
-}
-
-#calculatorcontent {
-    font-family: Arial;
-    min-width: 300px;
-    min-height: 300px;
-    margin: auto;
-    width: 300px;
-    border: solid black;
-}
-
-#buttons {
-    overflow: auto;
-    background-color: firebrick;
-}
-
-#display {
-    Background-color: black;
-    box-sizing:border-box;
-    border: solid orange;
-    border-width: 5px;
-    padding: 5px;
-    padding-right: 10px;
-    font-size: 1.5em;
-    text-align: right;
-    color: yellow;
-}
-
-/* Slide Out Functionality*/
-/*sloppy needs polishing*/
-
-#slideout {
-    margin-left: auto;
-    margin-right: auto;
-    width: 420px;
-    text-align: center;
-    position: relative;
-    top: -340px;
-}
-
-#slideout-content {
-    position: relative;
-    min-height: 340px;
-    min-width: 340px;
-    height: 400px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    text-align: left;
-}
-
-#slideout:hover, #slideout:hover > #slideout-content {
-    top: 0px; /*which side does the slider slides*/
-}
-
-#calculator-footer {
-    color: white;
-    background-color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-    height: 20px;
-    text-align: center;
-    font-size: 1.3em;
 }
 
